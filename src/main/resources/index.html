@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tree Actions - jQuery EasyUI Demo</title>
+<link rel="stylesheet" type="text/css"
+	href="libs/jquery-easyui-1.3.6/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css"
+	href="libs/jquery-easyui-1.3.6/themes/icon.css">
+<link rel="stylesheet" type="text/css"
+	href="libs/jquery-easyui-1.3.6/themes/demo.css">
+<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+
+<script type="text/javascript" src="libs/jquery-2.1.0.js"></script>
+<script type="text/javascript"
+	src="libs/jquery-easyui-1.3.6/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="libs/json2.js"></script>
+<script type="text/javascript" src="libs/bootstrap/js/bootstrap.js"></script>
+
+<style>
+.hex {
+	font: small-caps 24px monospace;
+	padding: 8px 4px 0px 8px
+}
+
+.highlight {
+	background-color: #FF0
+}
+
+.row_number {
+	font: italic small-caps 24px monospace;
+	color: #CCC;
+	width: 40px;
+}
+
+.col_number {
+	font: italic small-caps 24px monospace;
+	margin-left: 40px;
+	color: #CCC;
+	padding: 0px 0px 0px 8px
+}
+.panel-header, .panel-body {
+    border:0px;
+}
+.tooltip{
+    border:0px;
+}
+.tooltip-inner, .tooltip-arrow{
+	background-color: teal;
+}
+</style>
+</head>
+<body>
+	<h2>类文件内容查看器 1.class的高亮范围不对2.把(startPos, length)改为(startPos,
+		endPos)，防止属性名字冲突</h2>
+	<div class="easyui-layout" style="width: 100%; height: 800px;">
+		<div data-options="region:'north'" style="height: 100px; float: left">
+				<input class="btn btn-default" id="fileInput" type="file" name="fileInput" style="width:100%" />
+
+			<div class="btn-group btn-group-justified" style="margin-top:4px">
+				<a class="btn btn-danger" onclick="collapseAll()">收起所有节点</a>
+				<a class="btn btn-primary" onclick="expandAll()">展开所有节点</a>
+				<a class="btn btn-info" onclick="expandTo()">展开到当前节点</a>
+				<a class="btn btn-warning" onclick="getSelected()">显示选中信息</a>
+				<a class="btn btn-primary" onclick="startProcess()">开始处理</a>
+			</div>
+		</div>
+		<div data-options="region:'south',split:true" style="height: 50px;"></div>
+		<div data-options="region:'east',split:true" title="East"
+			style="width: 200px;"></div>
+		<div data-options="region:'west',split:true" title="导航"
+			style="width: 400px;">
+			<ul id="tt" class="easyui-tree" data-options="animate:true"></ul>
+		</div>
+		<div data-options="region:'center',title:'二进制内容',iconCls:'icon-ok'">
+			<div class="col_number">00 01 02 03 04 05 06 07 08 09 0A 0B 0C
+				0D 0E 0F</div>
+			<div>
+			       
+				<div style="float: left" id="hexView_left"></div>
+				<div style="float: left" id="hexView"></div>
+				<script>
+				$('#x').tooltip()</script>
+			</div>
+		</div>
+	</div>
+
+	<div id="log"></div>
+	<script>
+		function HTMLEnCode(str) {
+			var s = "";
+			if (str.length == 0)
+				return "";
+			s = str.replace(/&/g, "&gt;");
+			s = s.replace(/</g, "&lt;");
+			s = s.replace(/>/g, "&gt;");
+			s = s.replace(/    /g, "&nbsp;");
+			s = s.replace(/\'/g, "&#39;");
+			s = s.replace(/\"/g, "&quot;");
+			s = s.replace(/\n/g, "<br>");
+			return s;
+		}
+		function startProcess() {
+			var path = $("#fileInput").val();
+			var jsonStr = null;
+			if (path == "") {
+				jsonStr = $.ajax({
+					url : "result.json",
+					async : false
+				}).responseText;
+			} else {
+				jsonStr = parseClass(path);
+			}
+
+			var jsonObj = eval('(' + jsonStr + ')');
+			var result = translateJson(jsonObj["classFile"], "class", {});
+			addLog(JSON.stringify(result));
+			var data = new Array(0);
+			data[0] = result;
+			$("#tt").tree({
+				"data" : data
+			});
+			var hex = buildHexViewStr(jsonObj["hexStr"])
+			$("#hexView").append(hex);
+			$("#hexView span").tooltip({
+				delay: { show: 500, hide: 100 }
+			});
+		}
+
+		function buildHexViewStr(raw) {
+			var ret = "";
+			var cells = 0;
+			var rowCount = 1;
+			$("#hexView_left").append(
+					"<div class='row_number'>" + rowCount + "</div>");
+			for (var i = 0; i < raw.length; i += 2) {
+				var span = 
+						'<span class="hex" data-original-title="StartPos = {0}" ' +
+						'data-toggle="tooltip" data-placement="right"' + 
+						'data-startPos="{1}" id="{2}"' + 
+						'>' + 
+						raw.charAt(i)+ raw.charAt(i + 1) + 
+						"</span>";
+						
+				span = String.format(span, "" + i/2, "span" + i);
+				ret = ret + span;
+
+				cells++;
+				if (cells >= 16) {
+					cells = 0;
+					rowCount++;
+					ret += "<br>";
+					$("#hexView_left").append(
+							"<div class='row_number'>" + rowCount + "</div>");
+				}
+			}
+			return ret;
+		}
+
+		function addLog(log) {
+			$("#log").append("<p>" + log + "</p>");
+		}
+
+		function buildAttribute(jsonObj, startPos, length) {
+			var result = {}
+			result["startPos"] = startPos;
+			result["length"] = length;
+			return result;
+		}
+
+		function updatePosLength(result, nextSeg) {
+			if (nextSeg.startPos == 0 && nextSeg.length == 0)
+				return;
+			if (result.startPos == 0 && result.length == 0) {
+				result.startPos = nextSeg.startPos;
+				result.length = nextSeg.length;
+				return;
+			}
+
+			var prevStart = result.startPos;
+			if (result.startPos > nextSeg.startPos)
+				result.startPos = nextSeg.startPos;
+			if (prevStart + result.length < nextSeg.startPos + nextSeg.length)
+				result.length = nextSeg.startPos + nextSeg.length - prevStart;
+		}
+
+		function translateJson(jsonObj, name, segment) {
+			if (jsonObj == null)
+				return null;
+
+			if (typeof (jsonObj["startPos"]) != 'undefined') {
+				segment["startPos"] = jsonObj["startPos"];
+				segment["length"] = jsonObj["length"];
+			} else {
+				segment["startPos"] = 0;
+				segment["length"] = 0;
+			}
+
+			var root = {};
+			root["text"] = HTMLEnCode(name);
+			var children = [];
+			var node = {}
+			for ( var key in jsonObj) {
+				var value = jsonObj[key];
+				if (typeof value == "number") {
+					node = {};
+					node["text"] = HTMLEnCode(key + ":" + value);
+					children.push(node);
+				} else if (typeof value == "string") {
+					node = {};
+					node["text"] = HTMLEnCode(key + ":" + value);
+					children.push(node);
+				} else if (typeof value == 'object') {
+					childSeg = {}
+					var child = translateJson(value, key, childSeg);
+					if (child != null) {
+						children.push(child);
+						updatePosLength(segment, childSeg);
+					}
+				} else {
+					alert(typeof value)
+				}
+			}
+
+			root["attributes"] = buildAttribute(jsonObj, segment.startPos,
+					segment.length);
+
+			children.sort(function(a, b) {
+				if (typeof (a.attributes) != 'undefined'
+						&& typeof (b.attributes) != 'undefined') {
+					return a.attributes.startPos - b.attributes.startPos;
+				}
+
+				if (typeof (a.attributes) != 'undefined'
+						&& typeof (b.attributes) == 'undefined') {
+					return 1;
+				}
+				if (typeof (a.attributes) == 'undefined'
+						&& typeof (b.attributes) != 'undefined') {
+					return -1;
+				}
+
+				if (a.text < b.text)
+					return -1;
+				else if (a.text == b.text)
+					return 0;
+				else
+					return 1;
+			});
+			root["children"] = children;
+
+			return root;
+		}
+
+		String.format = function() {
+			if (arguments.length == 0)
+				return null;
+
+			var str = arguments[0];
+			for (var i = 1; i < arguments.length; i++) {
+				var re = new RegExp('\\{' + (i - 1) + '\\}', 'gm');
+				str = str.replace(re, arguments[i]);
+			}
+			return str;
+		}
+
+		function collapseAll() {
+			$('#tt').tree('collapseAll');
+		}
+		function expandAll() {
+			$('#tt').tree('expandAll');
+		}
+		function expandTo() {
+			var node = $('#tt').tree('find', 113);
+			$('#tt').tree('expandTo', node.target).tree('select', node.target);
+		}
+		function getSelected() {
+			var node = $('#tt').tree('getSelected');
+			if (node) {
+				var s = node.text;
+				if (node.attributes) {
+					s += "," + node.attributes.startPos + ","
+							+ node.attributes.length;
+				}
+				alert(s);
+			}
+		}
+
+		$('#tt').tree(
+				{
+					onClick : function(node) {
+						$("#hexView span").removeClass("highlight");
+						var start = node.attributes.startPos;
+						var length = node.attributes.length;
+						if (typeof (start) != 'undefined'
+								&& typeof (length) != 'undefined') {
+							$("#hexView span").each(function(index, value) {
+								if (index >= start && index < start + length)
+									$(value).addClass("highlight")
+							});
+						}
+					}
+				});
+	</script>
+</body>
+</html>

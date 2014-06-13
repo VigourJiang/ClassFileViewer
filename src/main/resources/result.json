@@ -1,0 +1,1109 @@
+{
+  "isSuccess" : false,
+  "classFile" : {
+    "interfaces" : null,
+    "fields" : null,
+    "methods" : [ {
+      "declaration" : "public void <init> ()",
+      "nameIndex" : 5,
+      "arrtibutes" : [ {
+        "codeLength" : 5,
+        "exceptionTableLength" : 0,
+        "attributeCount" : 2,
+        "maxLocals" : 1,
+        "maxStack" : 1,
+        "code" : "KrcACLE=",
+        "nameIndex" : 7,
+        "attributeLength" : 47,
+        "name" : "Code",
+        "startPos" : 1999,
+        "length" : 53
+      } ],
+      "descriptorIndex" : 6,
+      "accessFlags" : 1,
+      "attributesCount" : 1,
+      "modifiers" : "public",
+      "startPos" : 1991,
+      "length" : 61
+    }, {
+      "declaration" : "public static void main (java.lang.String[])",
+      "nameIndex" : 14,
+      "arrtibutes" : [ {
+        "codeLength" : 190,
+        "exceptionTableLength" : 1,
+        "attributeCount" : 3,
+        "maxLocals" : 6,
+        "maxStack" : 5,
+        "code" : "uwAQWbcAEky7ABNZK7cAFU0suwAYWbcAGrYAGywQChAKEQQAEQMAtgAfuwAjWSwDtwAlTqcAJDoEsgAouwAuWRIwtwAyGQS2ADW2ADu2AD+2AEIrtgBHsRJKuABMOgQZBBBcEC+2AFA6BC27AC5ZEla3ADIZBLYAOxJYtgA7tgA/tgBaV7sAXlktEmC3AGI6BS27AGVZLRkFtwBntgBqLLYAbqcADyu2AHGaAAgrtgB1Vyy2AHiZ//ArtgBHsQ==",
+        "nameIndex" : 7,
+        "attributeLength" : 449,
+        "name" : "Code",
+        "startPos" : 2060,
+        "length" : 455
+      } ],
+      "descriptorIndex" : 15,
+      "accessFlags" : 9,
+      "attributesCount" : 1,
+      "modifiers" : "public static",
+      "startPos" : 2052,
+      "length" : 463
+    } ],
+    "attributes" : [ {
+      "sourcefileIndex" : 142,
+      "nameIndex" : 141,
+      "attributeLength" : 2,
+      "name" : "SourceFile",
+      "startPos" : 2517,
+      "length" : 8
+    }, {
+      "numberOfClasses" : 2,
+      "nameIndex" : 143,
+      "attributeLength" : 18,
+      "name" : "InnerClasses",
+      "startPos" : 2525,
+      "length" : 24
+    } ],
+    "fieldCount" : {
+      "value" : 0,
+      "startPos" : 1987,
+      "length" : 2
+    },
+    "cpcount" : {
+      "value" : 145,
+      "startPos" : 8,
+      "length" : 2
+    },
+    "thisClass" : {
+      "value" : 1,
+      "startPos" : 1981,
+      "length" : 2
+    },
+    "superClass" : {
+      "value" : 3,
+      "startPos" : 1983,
+      "length" : 2
+    },
+    "byteArraySize" : 2549,
+    "accessFlags" : {
+      "value" : 33,
+      "modifiers" : "public  super ",
+      "startPos" : 1979,
+      "length" : 2
+    },
+    "interfacesCount" : {
+      "value" : 0,
+      "startPos" : 1985,
+      "length" : 2
+    },
+    "methodCount" : {
+      "value" : 2,
+      "startPos" : 1989,
+      "length" : 2
+    },
+    "constantPool" : [ null, {
+      "nameIndex" : 2,
+      "name" : "Class",
+      "tag" : 7,
+      "startPos" : 10,
+      "length" : 3
+    }, {
+      "bytesLength" : 22,
+      "name" : "Utf8",
+      "value" : "org/vigour/viewer/Main",
+      "tag" : 1,
+      "startPos" : 13,
+      "length" : 25
+    }, {
+      "nameIndex" : 4,
+      "name" : "Class",
+      "tag" : 7,
+      "startPos" : 38,
+      "length" : 3
+    }, {
+      "bytesLength" : 16,
+      "name" : "Utf8",
+      "value" : "java/lang/Object",
+      "tag" : 1,
+      "startPos" : 41,
+      "length" : 19
+    }, {
+      "bytesLength" : 6,
+      "name" : "Utf8",
+      "value" : "<init>",
+      "tag" : 1,
+      "startPos" : 60,
+      "length" : 9
+    }, {
+      "bytesLength" : 3,
+      "name" : "Utf8",
+      "value" : "()V",
+      "tag" : 1,
+      "startPos" : 69,
+      "length" : 6
+    }, {
+      "bytesLength" : 4,
+      "name" : "Utf8",
+      "value" : "Code",
+      "tag" : 1,
+      "startPos" : 75,
+      "length" : 7
+    }, {
+      "classIndex" : 3,
+      "nameAndTypeIndex" : 9,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 82,
+      "length" : 5
+    }, {
+      "nameIndex" : 5,
+      "descriptorIndex" : 6,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 87,
+      "length" : 5
+    }, {
+      "bytesLength" : 15,
+      "name" : "Utf8",
+      "value" : "LineNumberTable",
+      "tag" : 1,
+      "startPos" : 92,
+      "length" : 18
+    }, {
+      "bytesLength" : 18,
+      "name" : "Utf8",
+      "value" : "LocalVariableTable",
+      "tag" : 1,
+      "startPos" : 110,
+      "length" : 21
+    }, {
+      "bytesLength" : 4,
+      "name" : "Utf8",
+      "value" : "this",
+      "tag" : 1,
+      "startPos" : 131,
+      "length" : 7
+    }, {
+      "bytesLength" : 24,
+      "name" : "Utf8",
+      "value" : "Lorg/vigour/viewer/Main;",
+      "tag" : 1,
+      "startPos" : 138,
+      "length" : 27
+    }, {
+      "bytesLength" : 4,
+      "name" : "Utf8",
+      "value" : "main",
+      "tag" : 1,
+      "startPos" : 165,
+      "length" : 7
+    }, {
+      "bytesLength" : 22,
+      "name" : "Utf8",
+      "value" : "([Ljava/lang/String;)V",
+      "tag" : 1,
+      "startPos" : 172,
+      "length" : 25
+    }, {
+      "nameIndex" : 17,
+      "name" : "Class",
+      "tag" : 7,
+      "startPos" : 197,
+      "length" : 3
+    }, {
+      "bytesLength" : 31,
+      "name" : "Utf8",
+      "value" : "org/eclipse/swt/widgets/Display",
+      "tag" : 1,
+      "startPos" : 200,
+      "length" : 34
+    }, {
+      "classIndex" : 16,
+      "nameAndTypeIndex" : 9,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 234,
+      "length" : 5
+    }, {
+      "nameIndex" : 20,
+      "name" : "Class",
+      "tag" : 7,
+      "startPos" : 239,
+      "length" : 3
+    }, {
+      "bytesLength" : 29,
+      "name" : "Utf8",
+      "value" : "org/eclipse/swt/widgets/Shell",
+      "tag" : 1,
+      "startPos" : 242,
+      "length" : 32
+    }, {
+      "classIndex" : 19,
+      "nameAndTypeIndex" : 22,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 274,
+      "length" : 5
+    }, {
+      "nameIndex" : 5,
+      "descriptorIndex" : 23,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 279,
+      "length" : 5
+    }, {
+      "bytesLength" : 36,
+      "name" : "Utf8",
+      "value" : "(Lorg/eclipse/swt/widgets/Display;)V",
+      "tag" : 1,
+      "startPos" : 284,
+      "length" : 39
+    }, {
+      "nameIndex" : 25,
+      "name" : "Class",
+      "tag" : 7,
+      "startPos" : 323,
+      "length" : 3
+    }, {
+      "bytesLength" : 33,
+      "name" : "Utf8",
+      "value" : "org/eclipse/swt/layout/FillLayout",
+      "tag" : 1,
+      "startPos" : 326,
+      "length" : 36
+    }, {
+      "classIndex" : 24,
+      "nameAndTypeIndex" : 9,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 362,
+      "length" : 5
+    }, {
+      "classIndex" : 19,
+      "nameAndTypeIndex" : 28,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 367,
+      "length" : 5
+    }, {
+      "nameIndex" : 29,
+      "descriptorIndex" : 30,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 372,
+      "length" : 5
+    }, {
+      "bytesLength" : 9,
+      "name" : "Utf8",
+      "value" : "setLayout",
+      "tag" : 1,
+      "startPos" : 377,
+      "length" : 12
+    }, {
+      "bytesLength" : 35,
+      "name" : "Utf8",
+      "value" : "(Lorg/eclipse/swt/widgets/Layout;)V",
+      "tag" : 1,
+      "startPos" : 389,
+      "length" : 38
+    }, {
+      "classIndex" : 19,
+      "nameAndTypeIndex" : 32,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 427,
+      "length" : 5
+    }, {
+      "nameIndex" : 33,
+      "descriptorIndex" : 34,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 432,
+      "length" : 5
+    }, {
+      "bytesLength" : 9,
+      "name" : "Utf8",
+      "value" : "setBounds",
+      "tag" : 1,
+      "startPos" : 437,
+      "length" : 12
+    }, {
+      "bytesLength" : 7,
+      "name" : "Utf8",
+      "value" : "(IIII)V",
+      "tag" : 1,
+      "startPos" : 449,
+      "length" : 10
+    }, {
+      "nameIndex" : 36,
+      "name" : "Class",
+      "tag" : 7,
+      "startPos" : 459,
+      "length" : 3
+    }, {
+      "bytesLength" : 31,
+      "name" : "Utf8",
+      "value" : "org/eclipse/swt/browser/Browser",
+      "tag" : 1,
+      "startPos" : 462,
+      "length" : 34
+    }, {
+      "classIndex" : 35,
+      "nameAndTypeIndex" : 38,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 496,
+      "length" : 5
+    }, {
+      "nameIndex" : 5,
+      "descriptorIndex" : 39,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 501,
+      "length" : 5
+    }, {
+      "bytesLength" : 39,
+      "name" : "Utf8",
+      "value" : "(Lorg/eclipse/swt/widgets/Composite;I)V",
+      "tag" : 1,
+      "startPos" : 506,
+      "length" : 42
+    }, {
+      "classIndex" : 41,
+      "nameAndTypeIndex" : 43,
+      "name" : "Fieldref",
+      "tag" : 9,
+      "startPos" : 548,
+      "length" : 5
+    }, {
+      "nameIndex" : 42,
+      "name" : "Class",
+      "tag" : 7,
+      "startPos" : 553,
+      "length" : 3
+    }, {
+      "bytesLength" : 16,
+      "name" : "Utf8",
+      "value" : "java/lang/System",
+      "tag" : 1,
+      "startPos" : 556,
+      "length" : 19
+    }, {
+      "nameIndex" : 44,
+      "descriptorIndex" : 45,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 575,
+      "length" : 5
+    }, {
+      "bytesLength" : 3,
+      "name" : "Utf8",
+      "value" : "out",
+      "tag" : 1,
+      "startPos" : 580,
+      "length" : 6
+    }, {
+      "bytesLength" : 21,
+      "name" : "Utf8",
+      "value" : "Ljava/io/PrintStream;",
+      "tag" : 1,
+      "startPos" : 586,
+      "length" : 24
+    }, {
+      "nameIndex" : 47,
+      "name" : "Class",
+      "tag" : 7,
+      "startPos" : 610,
+      "length" : 3
+    }, {
+      "bytesLength" : 23,
+      "name" : "Utf8",
+      "value" : "java/lang/StringBuilder",
+      "tag" : 1,
+      "startPos" : 613,
+      "length" : 26
+    }, {
+      "stringIndex" : 49,
+      "name" : "String",
+      "tag" : 8,
+      "startPos" : 639,
+      "length" : 3
+    }, {
+      "bytesLength" : 31,
+      "name" : "Utf8",
+      "value" : "Could not instantiate Browser: ",
+      "tag" : 1,
+      "startPos" : 642,
+      "length" : 34
+    }, {
+      "classIndex" : 46,
+      "nameAndTypeIndex" : 51,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 676,
+      "length" : 5
+    }, {
+      "nameIndex" : 5,
+      "descriptorIndex" : 52,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 681,
+      "length" : 5
+    }, {
+      "bytesLength" : 21,
+      "name" : "Utf8",
+      "value" : "(Ljava/lang/String;)V",
+      "tag" : 1,
+      "startPos" : 686,
+      "length" : 24
+    }, {
+      "classIndex" : 54,
+      "nameAndTypeIndex" : 56,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 710,
+      "length" : 5
+    }, {
+      "nameIndex" : 55,
+      "name" : "Class",
+      "tag" : 7,
+      "startPos" : 715,
+      "length" : 3
+    }, {
+      "bytesLength" : 24,
+      "name" : "Utf8",
+      "value" : "org/eclipse/swt/SWTError",
+      "tag" : 1,
+      "startPos" : 718,
+      "length" : 27
+    }, {
+      "nameIndex" : 57,
+      "descriptorIndex" : 58,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 745,
+      "length" : 5
+    }, {
+      "bytesLength" : 10,
+      "name" : "Utf8",
+      "value" : "getMessage",
+      "tag" : 1,
+      "startPos" : 750,
+      "length" : 13
+    }, {
+      "bytesLength" : 20,
+      "name" : "Utf8",
+      "value" : "()Ljava/lang/String;",
+      "tag" : 1,
+      "startPos" : 763,
+      "length" : 23
+    }, {
+      "classIndex" : 46,
+      "nameAndTypeIndex" : 60,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 786,
+      "length" : 5
+    }, {
+      "nameIndex" : 61,
+      "descriptorIndex" : 62,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 791,
+      "length" : 5
+    }, {
+      "bytesLength" : 6,
+      "name" : "Utf8",
+      "value" : "append",
+      "tag" : 1,
+      "startPos" : 796,
+      "length" : 9
+    }, {
+      "bytesLength" : 45,
+      "name" : "Utf8",
+      "value" : "(Ljava/lang/String;)Ljava/lang/StringBuilder;",
+      "tag" : 1,
+      "startPos" : 805,
+      "length" : 48
+    }, {
+      "classIndex" : 46,
+      "nameAndTypeIndex" : 64,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 853,
+      "length" : 5
+    }, {
+      "nameIndex" : 65,
+      "descriptorIndex" : 58,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 858,
+      "length" : 5
+    }, {
+      "bytesLength" : 8,
+      "name" : "Utf8",
+      "value" : "toString",
+      "tag" : 1,
+      "startPos" : 863,
+      "length" : 11
+    }, {
+      "classIndex" : 67,
+      "nameAndTypeIndex" : 69,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 874,
+      "length" : 5
+    }, {
+      "nameIndex" : 68,
+      "name" : "Class",
+      "tag" : 7,
+      "startPos" : 879,
+      "length" : 3
+    }, {
+      "bytesLength" : 19,
+      "name" : "Utf8",
+      "value" : "java/io/PrintStream",
+      "tag" : 1,
+      "startPos" : 882,
+      "length" : 22
+    }, {
+      "nameIndex" : 70,
+      "descriptorIndex" : 52,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 904,
+      "length" : 5
+    }, {
+      "bytesLength" : 7,
+      "name" : "Utf8",
+      "value" : "println",
+      "tag" : 1,
+      "startPos" : 909,
+      "length" : 10
+    }, {
+      "classIndex" : 16,
+      "nameAndTypeIndex" : 72,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 919,
+      "length" : 5
+    }, {
+      "nameIndex" : 73,
+      "descriptorIndex" : 6,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 924,
+      "length" : 5
+    }, {
+      "bytesLength" : 7,
+      "name" : "Utf8",
+      "value" : "dispose",
+      "tag" : 1,
+      "startPos" : 929,
+      "length" : 10
+    }, {
+      "stringIndex" : 75,
+      "name" : "String",
+      "tag" : 8,
+      "startPos" : 939,
+      "length" : 3
+    }, {
+      "bytesLength" : 8,
+      "name" : "Utf8",
+      "value" : "user.dir",
+      "tag" : 1,
+      "startPos" : 942,
+      "length" : 11
+    }, {
+      "classIndex" : 41,
+      "nameAndTypeIndex" : 77,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 953,
+      "length" : 5
+    }, {
+      "nameIndex" : 78,
+      "descriptorIndex" : 79,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 958,
+      "length" : 5
+    }, {
+      "bytesLength" : 11,
+      "name" : "Utf8",
+      "value" : "getProperty",
+      "tag" : 1,
+      "startPos" : 963,
+      "length" : 14
+    }, {
+      "bytesLength" : 38,
+      "name" : "Utf8",
+      "value" : "(Ljava/lang/String;)Ljava/lang/String;",
+      "tag" : 1,
+      "startPos" : 977,
+      "length" : 41
+    }, {
+      "classIndex" : 81,
+      "nameAndTypeIndex" : 83,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 1018,
+      "length" : 5
+    }, {
+      "nameIndex" : 82,
+      "name" : "Class",
+      "tag" : 7,
+      "startPos" : 1023,
+      "length" : 3
+    }, {
+      "bytesLength" : 16,
+      "name" : "Utf8",
+      "value" : "java/lang/String",
+      "tag" : 1,
+      "startPos" : 1026,
+      "length" : 19
+    }, {
+      "nameIndex" : 84,
+      "descriptorIndex" : 85,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 1045,
+      "length" : 5
+    }, {
+      "bytesLength" : 7,
+      "name" : "Utf8",
+      "value" : "replace",
+      "tag" : 1,
+      "startPos" : 1050,
+      "length" : 10
+    }, {
+      "bytesLength" : 22,
+      "name" : "Utf8",
+      "value" : "(CC)Ljava/lang/String;",
+      "tag" : 1,
+      "startPos" : 1060,
+      "length" : 25
+    }, {
+      "stringIndex" : 87,
+      "name" : "String",
+      "tag" : 8,
+      "startPos" : 1085,
+      "length" : 3
+    }, {
+      "bytesLength" : 8,
+      "name" : "Utf8",
+      "value" : "file:///",
+      "tag" : 1,
+      "startPos" : 1088,
+      "length" : 11
+    }, {
+      "stringIndex" : 89,
+      "name" : "String",
+      "tag" : 8,
+      "startPos" : 1099,
+      "length" : 3
+    }, {
+      "bytesLength" : 11,
+      "name" : "Utf8",
+      "value" : "/index.html",
+      "tag" : 1,
+      "startPos" : 1102,
+      "length" : 14
+    }, {
+      "classIndex" : 35,
+      "nameAndTypeIndex" : 91,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 1116,
+      "length" : 5
+    }, {
+      "nameIndex" : 92,
+      "descriptorIndex" : 93,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 1121,
+      "length" : 5
+    }, {
+      "bytesLength" : 6,
+      "name" : "Utf8",
+      "value" : "setUrl",
+      "tag" : 1,
+      "startPos" : 1126,
+      "length" : 9
+    }, {
+      "bytesLength" : 21,
+      "name" : "Utf8",
+      "value" : "(Ljava/lang/String;)Z",
+      "tag" : 1,
+      "startPos" : 1135,
+      "length" : 24
+    }, {
+      "nameIndex" : 95,
+      "name" : "Class",
+      "tag" : 7,
+      "startPos" : 1159,
+      "length" : 3
+    }, {
+      "bytesLength" : 37,
+      "name" : "Utf8",
+      "value" : "org/vigour/viewer/Main$CustomFunction",
+      "tag" : 1,
+      "startPos" : 1162,
+      "length" : 40
+    }, {
+      "stringIndex" : 97,
+      "name" : "String",
+      "tag" : 8,
+      "startPos" : 1202,
+      "length" : 3
+    }, {
+      "bytesLength" : 10,
+      "name" : "Utf8",
+      "value" : "parseClass",
+      "tag" : 1,
+      "startPos" : 1205,
+      "length" : 13
+    }, {
+      "classIndex" : 94,
+      "nameAndTypeIndex" : 99,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 1218,
+      "length" : 5
+    }, {
+      "nameIndex" : 5,
+      "descriptorIndex" : 100,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 1223,
+      "length" : 5
+    }, {
+      "bytesLength" : 54,
+      "name" : "Utf8",
+      "value" : "(Lorg/eclipse/swt/browser/Browser;Ljava/lang/String;)V",
+      "tag" : 1,
+      "startPos" : 1228,
+      "length" : 57
+    }, {
+      "nameIndex" : 102,
+      "name" : "Class",
+      "tag" : 7,
+      "startPos" : 1285,
+      "length" : 3
+    }, {
+      "bytesLength" : 24,
+      "name" : "Utf8",
+      "value" : "org/vigour/viewer/Main$1",
+      "tag" : 1,
+      "startPos" : 1288,
+      "length" : 27
+    }, {
+      "classIndex" : 101,
+      "nameAndTypeIndex" : 104,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 1315,
+      "length" : 5
+    }, {
+      "nameIndex" : 5,
+      "descriptorIndex" : 105,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 1320,
+      "length" : 5
+    }, {
+      "bytesLength" : 77,
+      "name" : "Utf8",
+      "value" : "(Lorg/eclipse/swt/browser/Browser;Lorg/eclipse/swt/browser/BrowserFunction;)V",
+      "tag" : 1,
+      "startPos" : 1325,
+      "length" : 80
+    }, {
+      "classIndex" : 35,
+      "nameAndTypeIndex" : 107,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 1405,
+      "length" : 5
+    }, {
+      "nameIndex" : 108,
+      "descriptorIndex" : 109,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 1410,
+      "length" : 5
+    }, {
+      "bytesLength" : 19,
+      "name" : "Utf8",
+      "value" : "addProgressListener",
+      "tag" : 1,
+      "startPos" : 1415,
+      "length" : 22
+    }, {
+      "bytesLength" : 45,
+      "name" : "Utf8",
+      "value" : "(Lorg/eclipse/swt/browser/ProgressListener;)V",
+      "tag" : 1,
+      "startPos" : 1437,
+      "length" : 48
+    }, {
+      "classIndex" : 19,
+      "nameAndTypeIndex" : 111,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 1485,
+      "length" : 5
+    }, {
+      "nameIndex" : 112,
+      "descriptorIndex" : 6,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 1490,
+      "length" : 5
+    }, {
+      "bytesLength" : 4,
+      "name" : "Utf8",
+      "value" : "open",
+      "tag" : 1,
+      "startPos" : 1495,
+      "length" : 7
+    }, {
+      "classIndex" : 16,
+      "nameAndTypeIndex" : 114,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 1502,
+      "length" : 5
+    }, {
+      "nameIndex" : 115,
+      "descriptorIndex" : 116,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 1507,
+      "length" : 5
+    }, {
+      "bytesLength" : 15,
+      "name" : "Utf8",
+      "value" : "readAndDispatch",
+      "tag" : 1,
+      "startPos" : 1512,
+      "length" : 18
+    }, {
+      "bytesLength" : 3,
+      "name" : "Utf8",
+      "value" : "()Z",
+      "tag" : 1,
+      "startPos" : 1530,
+      "length" : 6
+    }, {
+      "classIndex" : 16,
+      "nameAndTypeIndex" : 118,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 1536,
+      "length" : 5
+    }, {
+      "nameIndex" : 119,
+      "descriptorIndex" : 116,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 1541,
+      "length" : 5
+    }, {
+      "bytesLength" : 5,
+      "name" : "Utf8",
+      "value" : "sleep",
+      "tag" : 1,
+      "startPos" : 1546,
+      "length" : 8
+    }, {
+      "classIndex" : 19,
+      "nameAndTypeIndex" : 121,
+      "name" : "Methodref",
+      "tag" : 10,
+      "startPos" : 1554,
+      "length" : 5
+    }, {
+      "nameIndex" : 122,
+      "descriptorIndex" : 116,
+      "name" : "NameAndType",
+      "tag" : 12,
+      "startPos" : 1559,
+      "length" : 5
+    }, {
+      "bytesLength" : 10,
+      "name" : "Utf8",
+      "value" : "isDisposed",
+      "tag" : 1,
+      "startPos" : 1564,
+      "length" : 13
+    }, {
+      "bytesLength" : 4,
+      "name" : "Utf8",
+      "value" : "args",
+      "tag" : 1,
+      "startPos" : 1577,
+      "length" : 7
+    }, {
+      "bytesLength" : 19,
+      "name" : "Utf8",
+      "value" : "[Ljava/lang/String;",
+      "tag" : 1,
+      "startPos" : 1584,
+      "length" : 22
+    }, {
+      "bytesLength" : 7,
+      "name" : "Utf8",
+      "value" : "display",
+      "tag" : 1,
+      "startPos" : 1606,
+      "length" : 10
+    }, {
+      "bytesLength" : 33,
+      "name" : "Utf8",
+      "value" : "Lorg/eclipse/swt/widgets/Display;",
+      "tag" : 1,
+      "startPos" : 1616,
+      "length" : 36
+    }, {
+      "bytesLength" : 5,
+      "name" : "Utf8",
+      "value" : "shell",
+      "tag" : 1,
+      "startPos" : 1652,
+      "length" : 8
+    }, {
+      "bytesLength" : 31,
+      "name" : "Utf8",
+      "value" : "Lorg/eclipse/swt/widgets/Shell;",
+      "tag" : 1,
+      "startPos" : 1660,
+      "length" : 34
+    }, {
+      "bytesLength" : 7,
+      "name" : "Utf8",
+      "value" : "browser",
+      "tag" : 1,
+      "startPos" : 1694,
+      "length" : 10
+    }, {
+      "bytesLength" : 33,
+      "name" : "Utf8",
+      "value" : "Lorg/eclipse/swt/browser/Browser;",
+      "tag" : 1,
+      "startPos" : 1704,
+      "length" : 36
+    }, {
+      "bytesLength" : 1,
+      "name" : "Utf8",
+      "value" : "e",
+      "tag" : 1,
+      "startPos" : 1740,
+      "length" : 4
+    }, {
+      "bytesLength" : 26,
+      "name" : "Utf8",
+      "value" : "Lorg/eclipse/swt/SWTError;",
+      "tag" : 1,
+      "startPos" : 1744,
+      "length" : 29
+    }, {
+      "bytesLength" : 6,
+      "name" : "Utf8",
+      "value" : "curDir",
+      "tag" : 1,
+      "startPos" : 1773,
+      "length" : 9
+    }, {
+      "bytesLength" : 18,
+      "name" : "Utf8",
+      "value" : "Ljava/lang/String;",
+      "tag" : 1,
+      "startPos" : 1782,
+      "length" : 21
+    }, {
+      "bytesLength" : 8,
+      "name" : "Utf8",
+      "value" : "function",
+      "tag" : 1,
+      "startPos" : 1803,
+      "length" : 11
+    }, {
+      "bytesLength" : 41,
+      "name" : "Utf8",
+      "value" : "Lorg/eclipse/swt/browser/BrowserFunction;",
+      "tag" : 1,
+      "startPos" : 1814,
+      "length" : 44
+    }, {
+      "bytesLength" : 13,
+      "name" : "Utf8",
+      "value" : "StackMapTable",
+      "tag" : 1,
+      "startPos" : 1858,
+      "length" : 16
+    }, {
+      "nameIndex" : 124,
+      "name" : "Class",
+      "tag" : 7,
+      "startPos" : 1874,
+      "length" : 3
+    }, {
+      "nameIndex" : 140,
+      "name" : "Class",
+      "tag" : 7,
+      "startPos" : 1877,
+      "length" : 3
+    }, {
+      "bytesLength" : 39,
+      "name" : "Utf8",
+      "value" : "org/eclipse/swt/browser/BrowserFunction",
+      "tag" : 1,
+      "startPos" : 1880,
+      "length" : 42
+    }, {
+      "bytesLength" : 10,
+      "name" : "Utf8",
+      "value" : "SourceFile",
+      "tag" : 1,
+      "startPos" : 1922,
+      "length" : 13
+    }, {
+      "bytesLength" : 9,
+      "name" : "Utf8",
+      "value" : "Main.java",
+      "tag" : 1,
+      "startPos" : 1935,
+      "length" : 12
+    }, {
+      "bytesLength" : 12,
+      "name" : "Utf8",
+      "value" : "InnerClasses",
+      "tag" : 1,
+      "startPos" : 1947,
+      "length" : 15
+    }, {
+      "bytesLength" : 14,
+      "name" : "Utf8",
+      "value" : "CustomFunction",
+      "tag" : 1,
+      "startPos" : 1962,
+      "length" : 17
+    } ],
+    "majorVersion" : {
+      "value" : 51,
+      "startPos" : 6,
+      "length" : 2
+    },
+    "minorVersion" : {
+      "value" : 0,
+      "startPos" : 4,
+      "length" : 2
+    },
+    "attributeCount" : {
+      "value" : 2,
+      "startPos" : 2515,
+      "length" : 2
+    }
+  },
+  "hexStr" : "CAFEBABE0000003300910700020100166F72672F7669676F75722F7669657765722F4D61696E0700040100106A6176612F6C616E672F4F626A6563740100063C696E69743E010003282956010004436F64650A000300090C0005000601000F4C696E654E756D6265725461626C650100124C6F63616C5661726961626C655461626C65010004746869730100184C6F72672F7669676F75722F7669657765722F4D61696E3B0100046D61696E010016285B4C6A6176612F6C616E672F537472696E673B295607001101001F6F72672F65636C697073652F7377742F776964676574732F446973706C61790A0010000907001401001D6F72672F65636C697073652F7377742F776964676574732F5368656C6C0A001300160C00050017010024284C6F72672F65636C697073652F7377742F776964676574732F446973706C61793B29560700190100216F72672F65636C697073652F7377742F6C61796F75742F46696C6C4C61796F75740A001800090A0013001C0C001D001E0100097365744C61796F7574010023284C6F72672F65636C697073652F7377742F776964676574732F4C61796F75743B29560A001300200C00210022010009736574426F756E64730100072849494949295607002401001F6F72672F65636C697073652F7377742F62726F777365722F42726F777365720A002300260C00050027010027284C6F72672F65636C697073652F7377742F776964676574732F436F6D706F736974653B492956090029002B07002A0100106A6176612F6C616E672F53797374656D0C002C002D0100036F75740100154C6A6176612F696F2F5072696E7453747265616D3B07002F0100176A6176612F6C616E672F537472696E674275696C64657208003101001F436F756C64206E6F7420696E7374616E74696174652042726F777365723A200A002E00330C00050034010015284C6A6176612F6C616E672F537472696E673B29560A003600380700370100186F72672F65636C697073652F7377742F5357544572726F720C0039003A01000A6765744D65737361676501001428294C6A6176612F6C616E672F537472696E673B0A002E003C0C003D003E010006617070656E6401002D284C6A6176612F6C616E672F537472696E673B294C6A6176612F6C616E672F537472696E674275696C6465723B0A002E00400C0041003A010008746F537472696E670A004300450700440100136A6176612F696F2F5072696E7453747265616D0C004600340100077072696E746C6E0A001000480C00490006010007646973706F736508004B010008757365722E6469720A0029004D0C004E004F01000B67657450726F7065727479010026284C6A6176612F6C616E672F537472696E673B294C6A6176612F6C616E672F537472696E673B0A005100530700520100106A6176612F6C616E672F537472696E670C005400550100077265706C616365010016284343294C6A6176612F6C616E672F537472696E673B08005701000866696C653A2F2F2F08005901000B2F696E6465782E68746D6C0A0023005B0C005C005D01000673657455726C010015284C6A6176612F6C616E672F537472696E673B295A07005F0100256F72672F7669676F75722F7669657765722F4D61696E24437573746F6D46756E6374696F6E08006101000A7061727365436C6173730A005E00630C00050064010036284C6F72672F65636C697073652F7377742F62726F777365722F42726F777365723B4C6A6176612F6C616E672F537472696E673B29560700660100186F72672F7669676F75722F7669657765722F4D61696E24310A006500680C0005006901004D284C6F72672F65636C697073652F7377742F62726F777365722F42726F777365723B4C6F72672F65636C697073652F7377742F62726F777365722F42726F7773657246756E6374696F6E3B29560A0023006B0C006C006D01001361646450726F67726573734C697374656E657201002D284C6F72672F65636C697073652F7377742F62726F777365722F50726F67726573734C697374656E65723B29560A0013006F0C007000060100046F70656E0A001000720C0073007401000F72656164416E64446973706174636801000328295A0A001000760C00770074010005736C6565700A001300790C007A007401000A6973446973706F736564010004617267730100135B4C6A6176612F6C616E672F537472696E673B010007646973706C61790100214C6F72672F65636C697073652F7377742F776964676574732F446973706C61793B0100057368656C6C01001F4C6F72672F65636C697073652F7377742F776964676574732F5368656C6C3B01000762726F777365720100214C6F72672F65636C697073652F7377742F62726F777365722F42726F777365723B0100016501001A4C6F72672F65636C697073652F7377742F5357544572726F723B0100066375724469720100124C6A6176612F6C616E672F537472696E673B01000866756E6374696F6E0100294C6F72672F65636C697073652F7377742F62726F777365722F42726F7773657246756E6374696F6E3B01000D537461636B4D61705461626C6507007C07008C0100276F72672F65636C697073652F7377742F62726F777365722F42726F7773657246756E6374696F6E01000A536F7572636546696C650100094D61696E2E6A61766101000C496E6E6572436C617373657301000E437573746F6D46756E6374696F6E002100010003000000000002000100050006000100070000002F00010001000000052AB70008B100000002000A00000006000100000018000B0000000C000100000005000C000D00000009000E000F00010007000001C100050006000000BEBB001059B700124CBB0013592BB700154D2CBB001859B7001AB6001B2C100A100A110400110300B6001FBB0023592C03B700254EA700243A04B20028BB002E591230B700321904B60035B6003BB6003FB600422BB60047B1124AB8004C3A041904105C102FB600503A042DBB002E591256B700321904B6003B1258B6003BB6003FB6005A57BB005E592D1260B700623A052DBB0065592D1905B70067B6006A2CB6006EA7000F2BB600719A00082BB60075572CB6007899FFF02BB60047B10001002A0034003700360003000A0000006600190000001B0008001C0011001D001C001E002A00220034002300390024004500250050002400530026005700270058002A005F002B006A002F00850030008A0031008C003000910033009F004200A3004300A6004400AD004500B2004300B9004700BD0048000B000000520008000000BE007B007C0000000800B6007D007E0001001100AD007F0080000200340003008100820003005800660081008200030039001F008300840004005F005F0085008600040091002D0087008800050089000000250004FF0037000307008A0700100700130001070036FC0020070023FD004D07005107008B0B0002008D00000002008E008F0000001200020065000000000000005E000100900008"
+}
