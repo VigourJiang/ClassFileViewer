@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.vigour</groupId>
-	<artifactId>org.vigour.ClassViewer</artifactId>
+	<artifactId>JavaClassViewer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>org.vigour.ClassViewer</name>
+	<name>JavaClassViewer</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
