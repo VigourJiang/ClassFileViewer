@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <title>The Java Virtual Machine Instruction Set</title>
+    <link rel="stylesheet" type="text/css"
+          href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css"
+          href="./bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css"
+          href="./JavaByteCode_css/javaspec.css">
+ 
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+
+<div lang="en" class="chapter" title="The Java Virtual Machine Instruction Set Quick Reference">
+    <div class="titlepage">
+        <div>
+            <h2 class="title"><a name="jvms-6"></a>The JVM Instruction Set Quick Reference
+            </h2>
+            <h3 >Java SE 7 Edition, Compiled by VigourJiang/github
+            </h3>
+        </div>
+    </div>
+    <div class="toc">
+        <table class="table table-striped table-bordered table-condensed">
+            <tr>
+                <th colspan="9">Stack</th>
+            </tr>
+            <tr>
+                <td>Push array element to stack</td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.aaload"><span
+                            class="emphasis"><em>aaload</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.baload"><span
+                            class="emphasis"><em>baload</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.caload"><span
+                            class="emphasis"><em>caload</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.saload"><span
+                            class="emphasis"><em>saload</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.iaload"><span
+                            class="emphasis"><em>iaload</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.laload"><span
+                            class="emphasis"><em>laload</em></span></a></span></dt>
+
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.faload"><span
+                            class="emphasis"><em>faload</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.daload"><span
+                            class="emphasis"><em>daload</em></span></a></span></dt>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Push simple variable to stack
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.aload"><span
+                            class="emphasis"><em>aload</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.aload_n"><span
+                            class="emphasis"><em>aload_&lt;n&gt;</em></span></a></span></dt>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.iload"><span
+                            class="emphasis"><em>iload</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.iload_n"><span
+                            class="emphasis"><em>iload_&lt;n&gt;</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.lload"><span
+                            class="emphasis"><em>lload</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.lload_n"><span
+                            class="emphasis"><em>lload_&lt;n&gt;</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.fload"><span
+                            class="emphasis"><em>fload</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.fload_n"><span
+                            class="emphasis"><em>fload_&lt;n&gt;</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.dload"><span
+                            class="emphasis"><em>dload</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.dload_n"><span
+                            class="emphasis"><em>dload_&lt;n&gt;</em></span></a></span></dt>
+
+                </td>
+            </tr>
+            <tr>
+                <td>Pop stack to array element</td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.aastore"><span
+                            class="emphasis"><em>aastore</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.bastore"><span
+                            class="emphasis"><em>bastore</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.castore"><span
+                            class="emphasis"><em>castore</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.sastore"><span
+                            class="emphasis"><em>sastore</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.iastore"><span
+                            class="emphasis"><em>iastore</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.lastore"><span
+                            class="emphasis"><em>lastore</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.fastore"><span
+                            class="emphasis"><em>fastore</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.dastore"><span
+                            class="emphasis"><em>dastore</em></span></a></span></dt>
+                </td>
+            </tr>
+            <tr>
+                <td>Pop stack to simple variable</td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.astore"><span
+                            class="emphasis"><em>astore</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.astore_n"><span
+                            class="emphasis"><em>astore_&lt;n&gt;</em></span></a></span></dt>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.istore"><span
+                            class="emphasis"><em>istore</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.istore_n"><span
+                            class="emphasis"><em>istore_&lt;n&gt;</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.lstore"><span
+                            class="emphasis"><em>lstore</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.lstore_n"><span
+                            class="emphasis"><em>lstore_&lt;n&gt;</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.fstore"><span
+                            class="emphasis"><em>fstore</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.fstore_n"><span
+                            class="emphasis"><em>fstore_&lt;n&gt;</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.dstore"><span
+                            class="emphasis"><em>dstore</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.dstore_n"><span
+                            class="emphasis"><em>dstore_&lt;n&gt;</em></span></a></span></dt>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Push constant to stack</td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.aconst_null"><span
+                            class="emphasis"><em>aconst_null</em></span></a></span></dt>
+
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.bipush"><span
+                            class="emphasis"><em>bipush</em></span></a></span></dt>
+                </td>
+                <td></td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.sipush"><span
+                            class="emphasis"><em>sipush</em></span></a></span></dt>
+
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.iconst_i"><span
+                            class="emphasis"><em>iconst_m1</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.iconst_i"><span
+                            class="emphasis"><em>iconst_0</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.iconst_i"><span
+                            class="emphasis"><em>iconst_1</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.iconst_i"><span
+                            class="emphasis"><em>iconst_2</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.iconst_i"><span
+                            class="emphasis"><em>iconst_3</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.iconst_i"><span
+                            class="emphasis"><em>iconst_4</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.iconst_i"><span
+                            class="emphasis"><em>iconst_5</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.lconst_l"><span
+                            class="emphasis"><em>lconst_0</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.lconst_l"><span
+                            class="emphasis"><em>lconst_1</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.fconst_f"><span
+                            class="emphasis"><em>fconst_0</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.fconst_f"><span
+                            class="emphasis"><em>fconst_1</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.fconst_f"><span
+                            class="emphasis"><em>fconst_2</em></span></a></span></dt>
+
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.dconst_d"><span
+                            class="emphasis"><em>dconst_0</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.dconst_d"><span
+                            class="emphasis"><em>dconst_1</em></span></a></span></dt>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    push const pool item to stack
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.ldc"><span
+                            class="emphasis"><em>ldc</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.ldc_w"><span
+                            class="emphasis"><em>ldc_w</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.ldc2_w"><span
+                            class="emphasis"><em>ldc2_w</em></span></a></span></dt>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td rowspan="4">
+                    Stack operation
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.pop"><span
+                            class="emphasis"><em>pop</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.pop2"><span
+                            class="emphasis"><em>pop2</em></span></a></span></dt>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.swap"><span
+                            class="emphasis"><em>swap</em></span></a></span></dt>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.dup"><span
+                            class="emphasis"><em>dup</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.dup_x1"><span
+                            class="emphasis"><em>dup_x1</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.dup_x2"><span
+                            class="emphasis"><em>dup_x2</em></span></a></span></dt>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.dup2"><span
+                            class="emphasis"><em>dup2</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.dup2_x1"><span
+                            class="emphasis"><em>dup2_x1</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.dup2_x2"><span
+                            class="emphasis"><em>dup2_x2</em></span></a></span></dt>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+        </table>
+        <table class="table table-striped table-bordered table-condensed">
+            <tr>
+                <th colspan="5">Jump</th>
+            </tr>
+            <tr>
+                <td>
+                    Unconditional Jump
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.goto"><span
+                            class="emphasis"><em>goto</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.goto_w"><span
+                            class="emphasis"><em>goto_w</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.jsr"><span
+                            class="emphasis"><em>jsr</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.jsr_w"><span
+                            class="emphasis"><em>jsr_w</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.ret"><span
+                            class="emphasis"><em>ret</em></span></a></span></dt>
+
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    Conditional Jump
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.if_acmp_cond"><span
+                            class="emphasis"><em>if_acmpeq</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.if_acmp_cond"><span
+                            class="emphasis"><em>if_acmpne</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.if_icmp_cond"><span
+                            class="emphasis"><em>if_icmpeq</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.if_icmp_cond"><span
+                            class="emphasis"><em>if_icmpne</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.if_icmp_cond"><span
+                            class="emphasis"><em>if_icmplt</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.if_icmp_cond"><span
+                            class="emphasis"><em>if_icmple</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.if_icmp_cond"><span
+                            class="emphasis"><em>if_icmpgt</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.if_icmp_cond"><span
+                            class="emphasis"><em>if_icmpge</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.if_cond"><span
+                            class="emphasis"><em>ifeq</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.if_cond"><span
+                            class="emphasis"><em>ifne</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.if_cond"><span
+                            class="emphasis"><em>iflt</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.if_cond"><span
+                            class="emphasis"><em>ifle</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.if_cond"><span
+                            class="emphasis"><em>ifgt</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.if_cond"><span
+                            class="emphasis"><em>ifge</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.ifnonnull"><span
+                            class="emphasis"><em>ifnonnull</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.ifnull"><span
+                            class="emphasis"><em>ifnull</em></span></a></span></dt>
+                </td>
+            </tr>
+            <tr>
+                <td>Table Jump</td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.lookupswitch"><span
+                            class="emphasis"><em>lookupswitch</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.tableswitch"><span
+                            class="emphasis"><em>tableswitch</em></span></a></span></dt>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <table class="table table-striped table-bordered table-condensed">
+            <tr>
+                <th colspan="7">Java Specific</th>
+            </tr>
+            <tr>
+                <td>
+                    Reference Convertion
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.checkcast"><span
+                            class="emphasis"><em>checkcast</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.instanceof"><span
+                            class="emphasis"><em>instanceof</em></span></a></span></dt>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+
+            <tr>
+                <td>
+                    monitor
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.monitorenter"><span
+                            class="emphasis"><em>monitorenter</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.monitorexit"><span
+                            class="emphasis"><em>monitorexit</em></span></a></span></dt>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>invoke</td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.invokedynamic"><span
+                            class="emphasis"><em>invokedynamic</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.invokeinterface"><span
+                            class="emphasis"><em>invokeinterface</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.invokespecial"><span
+                            class="emphasis"><em>invokespecial</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.invokestatic"><span
+                            class="emphasis"><em>invokestatic</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.invokevirtual"><span
+                            class="emphasis"><em>invokevirtual</em></span></a></span></dt>
+                </td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>return</td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.areturn"><span
+                            class="emphasis"><em>areturn</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.return"><span
+                            class="emphasis"><em>return</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.ireturn"><span
+                            class="emphasis"><em>ireturn</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.lreturn"><span
+                            class="emphasis"><em>lreturn</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.freturn"><span
+                            class="emphasis"><em>freturn</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.dreturn"><span
+                            class="emphasis"><em>dreturn</em></span></a></span></dt>
+                </td>
+            </tr>
+            <tr>
+                <td>new</td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.new"><span
+                            class="emphasis"><em>new</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.newarray"><span
+                            class="emphasis"><em>newarray</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.anewarray"><span
+                            class="emphasis"><em>anewarray</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.multianewarray"><span
+                            class="emphasis"><em>multianewarray</em></span></a></span></dt>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Field R/W</td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.putfield"><span
+                            class="emphasis"><em>putfield</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.putstatic"><span
+                            class="emphasis"><em>putstatic</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.getfield"><span
+                            class="emphasis"><em>getfield</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.getstatic"><span
+                            class="emphasis"><em>getstatic</em></span></a></span></dt>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+
+
+            <tr>
+                <td>Miscellaneous</td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.athrow"><span
+                            class="emphasis"><em>athrow</em></span></a></span></dt>
+
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.arraylength"><span
+                            class="emphasis"><em>arraylength</em></span></a></span></dt>
+
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.wide"><span
+                            class="emphasis"><em>wide</em></span></a></span></dt>
+
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.nop"><span
+                            class="emphasis"><em>nop</em></span></a></span></dt>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <table class="table table-striped table-bordered table-condensed">
+            <tr>
+                <th colspan="9">Math</th>
+            </tr>
+            <tr>
+                <td>Mathematic Operator</td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.iinc"><span
+                            class="emphasis"><em>iinc</em></span></a></span></dt>
+
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.iadd"><span
+                            class="emphasis"><em>iadd</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.ladd"><span
+                            class="emphasis"><em>ladd</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.fadd"><span
+                            class="emphasis"><em>fadd</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.dadd"><span
+                            class="emphasis"><em>dadd</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.idiv"><span
+                            class="emphasis"><em>idiv</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.ldiv"><span
+                            class="emphasis"><em>ldiv</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.fdiv"><span
+                            class="emphasis"><em>fdiv</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.ddiv"><span
+                            class="emphasis"><em>ddiv</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.imul"><span
+                            class="emphasis"><em>imul</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.lmul"><span
+                            class="emphasis"><em>lmul</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.fmul"><span
+                            class="emphasis"><em>fmul</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.dmul"><span
+                            class="emphasis"><em>dmul</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.ineg"><span
+                            class="emphasis"><em>ineg</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.lneg"><span
+                            class="emphasis"><em>lneg</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.fneg"><span
+                            class="emphasis"><em>fneg</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.dneg"><span
+                            class="emphasis"><em>dneg</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.irem"><span
+                            class="emphasis"><em>irem</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.lrem"><span
+                            class="emphasis"><em>lrem</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.frem"><span
+                            class="emphasis"><em>frem</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.drem"><span
+                            class="emphasis"><em>drem</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.isub"><span
+                            class="emphasis"><em>isub</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.lsub"><span
+                            class="emphasis"><em>lsub</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.fsub"><span
+                            class="emphasis"><em>fsub</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.dsub"><span
+                            class="emphasis"><em>dsub</em></span></a></span></dt>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Bit Operator</td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.iand"><span
+                            class="emphasis"><em>iand</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.land"><span
+                            class="emphasis"><em>land</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.ior"><span
+                            class="emphasis"><em>ior</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.lor"><span
+                            class="emphasis"><em>lor</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.ixor"><span
+                            class="emphasis"><em>ixor</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.lxor"><span
+                            class="emphasis"><em>lxor</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.ishl"><span
+                            class="emphasis"><em>ishl</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.lshl"><span
+                            class="emphasis"><em>lshl</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.ishr"><span
+                            class="emphasis"><em>ishr</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.lshr"><span
+                            class="emphasis"><em>lshr</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.iushr"><span
+                            class="emphasis"><em>iushr</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.lushr"><span
+                            class="emphasis"><em>lushr</em></span></a></span></dt>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Compare</td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.dcmp_op"><span
+                            class="emphasis"><em>dcmpg</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.dcmp_op"><span
+                            class="emphasis"><em>dcmpl</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.fcmp_op"><span
+                            class="emphasis"><em>fcmpg</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.fcmp_op"><span
+                            class="emphasis"><em>fcmpl</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.lcmp"><span
+                            class="emphasis"><em>lcmp</em></span></a></span></dt>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Primitive Conversion</td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.d2f"><span
+                            class="emphasis"><em>d2f</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.d2i"><span
+                            class="emphasis"><em>d2i</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.d2l"><span
+                            class="emphasis"><em>d2l</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.f2d"><span
+                            class="emphasis"><em>f2d</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.f2i"><span
+                            class="emphasis"><em>f2i</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.f2l"><span
+                            class="emphasis"><em>f2l</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.l2d"><span
+                            class="emphasis"><em>l2d</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.l2f"><span
+                            class="emphasis"><em>l2f</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.l2i"><span
+                            class="emphasis"><em>l2i</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.i2d"><span
+                            class="emphasis"><em>i2d</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.i2f"><span
+                            class="emphasis"><em>i2f</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.i2l"><span
+                            class="emphasis"><em>i2l</em></span></a></span></dt>
+                </td>
+                <td>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.i2b"><span
+                            class="emphasis"><em>i2b</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.i2s"><span
+                            class="emphasis"><em>i2s</em></span></a></span></dt>
+                    <dt><span class="section"><a
+                            href="BytecodeList.html#jvms-6.5.i2c"><span
+                            class="emphasis"><em>i2c</em></span></a></span></dt>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+</body>
+</html>
